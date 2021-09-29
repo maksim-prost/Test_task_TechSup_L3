@@ -20,7 +20,8 @@ if [[ ! -f archives/"$SERVER_DATE".tar ]]
 Дата: $(date +%d/%m/%y )">"$report_out"
         chmod 444 "$report_out"
         tar -cf archives/"$SERVER_DATE".tar "$report_out" "$failed_out" "$running_out"
-        rm -f "*".out temp
+        rm -f *.out 
+        rm -f temp
         # rm  -f "$report_out" "$failed_out" "$running_out" temp
 fi
 
